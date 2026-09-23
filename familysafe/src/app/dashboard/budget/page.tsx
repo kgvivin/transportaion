@@ -82,7 +82,7 @@ export default function MonthlyBudget() {
                   <CartesianGrid strokeDasharray="3 3" vertical={false} />
                   <XAxis dataKey="category" />
                   <YAxis />
-                  <Tooltip formatter={(value: number) => `₹${value.toLocaleString()}`} />
+                  <Tooltip formatter={(value: any) => `₹${Number(value).toLocaleString()}`} />
                   <Bar dataKey="amount" fill="var(--color-blue)" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>

@@ -181,7 +181,7 @@ export default function WhatIfPlanner() {
                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
                 <XAxis dataKey="name" />
                 <YAxis />
-                <Tooltip formatter={(value: number) => `₹${value.toLocaleString()}`} />
+                <Tooltip formatter={(value: any) => `₹${Number(value).toLocaleString()}`} />
                 <Legend />
                 <Bar dataKey="Income" fill="var(--color-green)" radius={[4, 4, 0, 0]} />
                 <Bar dataKey="Expenses" fill="var(--color-yellow)" radius={[4, 4, 0, 0]} />

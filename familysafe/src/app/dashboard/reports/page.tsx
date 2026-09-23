@@ -116,7 +116,7 @@ export default function Reports() {
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>
-                  <RechartsTooltip formatter={(value: number) => `₹${value.toLocaleString()}`} />
+                  <RechartsTooltip formatter={(value: any) => `₹${Number(value).toLocaleString()}`} />
                   <Legend />
                 </PieChart>
               </ResponsiveContainer>
@@ -134,7 +134,7 @@ export default function Reports() {
                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
                 <XAxis dataKey="name" />
                 <YAxis />
-                <RechartsTooltip formatter={(value: number) => `₹${value.toLocaleString()}`} />
+                <RechartsTooltip formatter={(value: any) => `₹${Number(value).toLocaleString()}`} />
                 <Line type="monotone" dataKey="Spent" stroke="var(--color-blue)" strokeWidth={3} dot={{ r: 5 }} />
               </LineChart>
             </ResponsiveContainer>
